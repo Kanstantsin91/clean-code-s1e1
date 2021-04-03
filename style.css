@@ -1,5 +1,5 @@
 /* Basic Style */
-body {
+.page {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
@@ -60,7 +60,7 @@ body {
   color: #3a3a3a;
 }
 /* Heading */
-h3 {
+.section-title {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -87,16 +87,15 @@ h3 {
 }
 
 /* New Task */
-input#new-task {
+.add-form__task {
   width: 318px;
 }
 
 /* Task list */
-li {
+.task-list__item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -113,12 +112,12 @@ li {
 .text-input {
   width: 226px;
 }
-.button_delete img {
+.button__img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-.button_delete img:hover {
+.button__img:hover {
   transform: rotateZ(0);
 }
 
@@ -138,6 +137,6 @@ li {
   width: 224px;
 }
 
-.task-list__item_edited label {
+.task-list__item_edited .task{
   display: none;
 }
