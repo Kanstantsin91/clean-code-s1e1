@@ -10,10 +10,10 @@ body {
   display: block;
   text-align: right;
 }
-.header img {
+.header__img {
   width: 100%;
 }
-.header .more-inf {
+.header__more-inf {
   font-family: fantasy, cursive;
 }
 
@@ -29,28 +29,24 @@ body {
   width: 500px;
   margin: 0 auto 0;
 }
-.task {
+.task,
+.add-form__task,
+.text-input {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
+  outline: none;
 }
 .add-form {
   display: flex;
   padding-top: 20px;
 }
-ul {
+.task-list {
   margin:0;
   padding: 0px;
-}
-li, 
-h3 {
   list-style: none;
 }
-input,
-button {
-  outline: none;
-}
-button {
+.button {
   background: none;
   border: 0px;
   color: #888;
@@ -58,8 +54,9 @@ button {
   width: 60px;
   font-family: Lato, sans-serif;
   cursor: pointer;
+  outline: none;
 }
-button:hover {
+.button:hover {
   color: #3a3a3a;
 }
 /* Heading */
@@ -72,7 +69,8 @@ h3 {
   margin: 0;
   text-transform: uppercase;
 }
-input[type="text"] {
+.text-input,
+.add-form__task {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -84,7 +82,7 @@ input[type="text"] {
   font-family: Lato, sans-serif;
   color: #888;
 }
-input[type="text"]:focus {
+.text-input:focus {
   color: #333;
 }
 
@@ -103,47 +101,43 @@ li {
   justify-content: space-between;
   align-items: center;
 }
-li > * {
-  vertical-align: middle;
-}
-
-li > input[type="checkbox"] {
+.checkbox {
   margin: 0 10px;
 }
-li > label {
+.task {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
-li >  input[type="text"] {
+.text-input {
   width: 226px;
 }
-button.delete img {
+.button_delete img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-button.delete img:hover {
+.button_delete img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-ul#completed-tasks label {
+.task-list_completed {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-ul li input[type="text"] {
+.text-input {
   display: none;
 }
 
-ul li.edit-mode input[type="text"] {
+.task-list__item_edited .text-input {
   display: inline-block;
   width: 224px;
 }
 
-ul li.edit-mode label {
+.task-list__item_edited label {
   display: none;
 }
