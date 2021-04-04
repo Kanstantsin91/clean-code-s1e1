@@ -122,7 +122,8 @@
 }
 
 /* Completed */
-.task-list_completed {
+.task-list_completed .task,
+.task-list_completed .text-input{
   text-decoration: line-through;
   color: #888;
 }
